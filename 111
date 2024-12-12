@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>数字产品网站</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 20px;
+            background-color: #f4f4f4;
+        }
+        button {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 10px;
+            cursor: pointer;
+            border-radius: 8px;
+        }
+        .hidden {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <h1>选择数字产品</h1>
+
+    <!-- 两个主按钮 -->
+    <button id="btnPhone" onclick="showPhoneOptions()">手机</button>
+    <button id="btnCamera" onclick="showCameraOptions()">相机</button>
+
+    <!-- 手机选项按钮 -->
+    <div id="phoneOptions" class="hidden">
+        <button onclick="window.location.href='https://www.wmslz.com/s/tQmuN2O81rI#'">鸿创数码</button>
+        <button onclick="window.location.href='https://www.wmslz.com/s/ybQctUv81nT#'">品正数码</button>
+    </div>
+
+    <!-- 相机选项按钮 -->
+    <div id="cameraOptions" class="hidden">
+        <button onclick="window.location.href='https://www.wmslz.com/s/tQmuN2O81rI#'">赁品数码</button>
+    </div>
+
+    <script>
+        // 显示手机选项
+        function showPhoneOptions() {
+            document.getElementById('phoneOptions').classList.remove('hidden');
+            document.getElementById('cameraOptions').classList.add('hidden');
+        }
+
+        // 显示相机选项
+        function showCameraOptions() {
+            document.getElementById('cameraOptions').classList.remove('hidden');
+            document.getElementById('phoneOptions').classList.add('hidden');
+        }
+    </script>
+</body>
+</html>
