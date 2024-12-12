@@ -28,9 +28,12 @@
             color: #2C3E50;
         }
 
-        .button-container {
+        .options-container {
             display: flex;
-            gap: 20px;
+            flex-direction: column;
+            gap: 15px;
+            justify-content: center;
+            align-items: center;
         }
 
         button {
@@ -56,17 +59,6 @@
             transform: translateY(0);
         }
 
-        .hidden {
-            display: none;
-        }
-
-        .options-container {
-            margin-top: 20px;
-            display: flex;
-            flex-direction: column;
-            gap: 15px;
-        }
-
         .options-container button {
             background-color: #3498db;
         }
@@ -77,9 +69,8 @@
 
         /* 响应式设计 */
         @media (max-width: 600px) {
-            .button-container {
-                flex-direction: column;
-                gap: 15px;
+            .options-container {
+                padding: 0 15px;
             }
         }
     </style>
@@ -88,37 +79,12 @@
 
     <h1>选择数字产品</h1>
 
-    <div class="button-container">
-        <!-- 两个主按钮 -->
-        <button id="btnPhone" onclick="showPhoneOptions()">手机</button>
-        <button id="btnCamera" onclick="showCameraOptions()">相机</button>
-    </div>
-
-    <!-- 手机选项按钮 -->
-    <div id="phoneOptions" class="options-container hidden">
+    <!-- 选项按钮 -->
+    <div class="options-container">
         <button onclick="window.location.href='https://www.wmslz.com/s/tQmuN2O81rI#'">鸿创数码</button>
         <button onclick="window.location.href='https://www.wmslz.com/s/ybQctUv81nT#'">品正数码</button>
-    </div>
-
-    <!-- 相机选项按钮 -->
-    <div id="cameraOptions" class="options-container hidden">
         <button onclick="window.location.href='https://www.wmslz.com/s/tQmuN2O81rI#'">赁品数码</button>
     </div>
 
-    <script>
-        // 显示手机选项
-        function showPhoneOptions() {
-            document.getElementById('phoneOptions').classList.remove('hidden');
-            document.getElementById('cameraOptions').classList.add('hidden');
-        }
-
-        // 显示相机选项
-        function showCameraOptions() {
-            document.getElementById('cameraOptions').classList.remove('hidden');
-            document.getElementById('phoneOptions').classList.add('hidden');
-        }
-    </script>
-
 </body>
 </html>
-
